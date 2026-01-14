@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0f0f14, #0b0b10);
+  color: #eaeaea;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.brand {
+  font-size: 24px;
+  color: #7c7cff;
+}
+
+.nav-link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 500px;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: linear-gradient(90deg, #7c7cff, #9f7cff);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(124,124,255,0.4);
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 80px 30px;
+}
+
+.feature-card {
+  background: #1a1a25;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card i {
+  font-size: 32px;
+  color: #7c7cff;
+  margin-bottom: 16px;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0b0b10;
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: #1a1a25;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #7c7cff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 30px;
+  }
+}
