@@ -426,11 +426,17 @@ footer {
     font-size: 13px;
   }
 
-  /* PROJECTS */
-  .projects {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+ /* ===== PROJECTS LAYOUT ===== */
+
+.projects {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 ke samping */
+  gap: 24px;
+}
+
 
   .card {
     padding: 22px;
@@ -502,6 +508,11 @@ footer {
     margin-left: 0;
     font-size: 16px;
   }
+
+  .projects {
+  grid-template-columns: 1fr; /* mobile ke bawah */
+}
+
 }
 
 /* ===== FORCE CONTACT HORIZONTAL ===== */
