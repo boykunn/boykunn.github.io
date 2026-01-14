@@ -27,17 +27,12 @@ body {
   align-items: center;
 }
 
-.logo-hover {
-  font-size: 26px;
-  font-weight: 800;
+.logo-bk {
+  font-size: 28px;
+  font-weight: 900;
   letter-spacing: 3px;
   color: #7c7cff;
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
-}
-
-.logo-hover:hover {
-  transform: scale(1.1);
-  text-shadow: 0 0 15px rgba(124, 124, 255, 0.8);
+  text-transform: uppercase;
 }
 
 
@@ -186,37 +181,59 @@ body {
 }
 
 /* CONTACT */
-.contact-links {
+/* ===== CONTACT SECTION ===== */
+#contact .contact-links {
+  max-width: 600px;          /* SAMA RASA seperti Projects */
+  margin: 30px auto 0;
+
   display: flex;
   justify-content: center;
-  gap: 22px;
-  margin-top: 26px;
+  gap: 20px;
 }
 
-.contact-links a {
+#contact .contact-links a {
+  flex: 1;                   /* dua tombol seimbang */
+  max-width: 260px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+
   background: #1a1a25;
-  padding: 12px 22px;
+  padding: 14px 20px;
   border-radius: 30px;
+
   color: #eaeaea;
   text-decoration: none;
+  font-weight: 600;
+
   transition: all 0.3s ease;
 }
 
-.contact-links a i {
+#contact .contact-links a i {
   color: #7c7cff;
+  font-size: 18px;
 }
 
-.contact-links a:hover {
+#contact .contact-links a span {
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+#contact .contact-links a:hover {
   background: #7c7cff;
   transform: translateY(-4px);
 }
 
-.contact-links a:hover i {
-  color: #fff;
+#contact .contact-links a:hover i {
+  color: #ffffff;
 }
+
+#contact .contact-links a:hover span {
+  transform: translateX(6px);
+}
+
 
 /* FOOTER */
 footer {
@@ -299,6 +316,17 @@ footer {
 
 /* ================= RESPONSIVE MOBILE ================= */
 @media (max-width: 768px) {
+  .logo-bk {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+  #contact .contact-links {
+  flex-direction: row;      /* tetap sejajar */
+  flex-wrap: wrap;          /* kalau sempit, turun rapi */
+}
+
+}
+
 
   /* NAVBAR */
   @media (max-width: 768px) {
@@ -409,17 +437,14 @@ footer {
   }
 
   /* CONTACT */
-  .contact-links {
-    flex-direction: column;
-    gap: 14px;
-  }
+
 
   .contact-links a {
     justify-content: center;
     width: 100%;
   }
 
-}
+
 
 .social-links a:nth-child(1):hover { color: #fff; }      /* GitHub */
 .social-links a:nth-child(2):hover { color: #e1306c; }   /* Instagram */
@@ -477,4 +502,14 @@ footer {
     margin-left: 0;
     font-size: 16px;
   }
+}
+
+/* ===== FORCE CONTACT HORIZONTAL ===== */
+#contact .contact-links {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;
+  flex-wrap: nowrap !important;
 }
